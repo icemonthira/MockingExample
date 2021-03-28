@@ -20,7 +20,10 @@ public class Calculator {
             if(!negativeNumbers.isEmpty()) {
                 throw new RuntimeException("Input contains negative numbers " + negativeNumbers);
             }
-            return numberList.stream().mapToInt(Integer::parseInt).sum();
+            return numberList.stream()
+                    .mapToInt(Integer::parseInt)
+                    .filter(n -> n<1001)
+                    .sum();
         }
 
 
