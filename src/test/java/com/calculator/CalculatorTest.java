@@ -39,5 +39,10 @@ class CalculatorTest {
         assertEquals(6, sumWithNewLines);
     }
 
+//    Step 4 is supported out of the box. The implementation
+// does not care about specific delimiter. Will skip this test
+//    @Test
+//    @DisplayName("Step 4")
+
 
 }
