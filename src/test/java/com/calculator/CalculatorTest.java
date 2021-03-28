@@ -43,12 +43,18 @@ class CalculatorTest {
 // does not care about specific delimiter. Will skip this test
 //    @Test
 //    @DisplayName("Step 4")
+
+
     @Test
     @DisplayName("Step 5")
     void doNotSupportNegativeNumbers(){
-        int sumWithNegativeNumbers = calculator.add("-5,3,2");
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> {
+            calculator.add("-5,3,2");
+        });
 
-        assertEquals(5, sumWithNegativeNumbers);
+        String expectedMessage = "Input contains negative numbers ";
+        String actualMessage = exception.getMessage();
+        assertTrue(actualMessage.contains(expectedMessage));
     }
 
 
