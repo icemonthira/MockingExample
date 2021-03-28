@@ -57,6 +57,14 @@ class CalculatorTest {
         assertTrue(actualMessage.contains(expectedMessage));
     }
 
+    @Test
+    @DisplayName("Step 6")
+    void doNotSupportNumbersBiggerThanThousand(){
+        int sumWithoutThousand = calculator.add("2+1001");
+
+        assertEquals(2, sumWithoutThousand);
+    }
+
 
 }
 
