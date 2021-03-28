@@ -11,8 +11,16 @@ class CalculatorTest {
     @Test
     void addition (){
         int sum = calculator.add("");
+        int sum2 = calculator.add("1,2");
 
         assertEquals(0, sum);
+        assertEquals(3, sum2);
+
+
+
+
+
+
 
     }
 }
