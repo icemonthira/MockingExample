@@ -65,6 +65,10 @@ class CalculatorTest {
         assertEquals(2, sumWithoutThousand);
     }
 
+//    Step 7,8 and 9 is supported out of the box. The implementation
+// does not care about specific delimiters. Will skip this tests
+
+
 
 }
 
